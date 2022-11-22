@@ -6,12 +6,28 @@
     <title>
         Brooke Claroni HW 6
     </title>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    Hello world
     <div id="app">
-        <h1>{{ message }}</h1>
+        <h2 class="title">{{ titleMessage }}</h2>
+        <span @mouseover="baristaHover = true" @mouseleave="baristaHover = false">
+            <img :src=getBaristaImage() alt="Starbucks Barista" >
+        </span>
+
+        <span @mouseover="postalHover = true" @mouseleave="postalHover = false">
+            <img :src=getPostalImage() alt="Postal Worker" >
+        </span>
+
+        <span @mouseover="hotdogHover = true" @mouseleave="hotdogHover = false">
+            <img :src=getHotdogImage() alt="Garnished Hotdog" >
+        </span>
+
+        <span @mouseover="lionHover = true" @mouseleave="lionHover = false">
+            <img :src=getLionImage() alt="Ferocious Lion" >
+        </span>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="script.js"></script>
