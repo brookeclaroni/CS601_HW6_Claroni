@@ -11,22 +11,13 @@
 
 <body>
     <div id="app">
+        <h1>Brooke Claroni HW 6</h1>
         <h2 class="title">{{ titleMessage }}</h2>
-        <span @mouseover="baristaHover = true" @mouseleave="baristaHover = false">
-            <img :src=getBaristaImage() alt="Starbucks Barista" >
-        </span>
 
-        <span @mouseover="postalHover = true" @mouseleave="postalHover = false">
-            <img :src=getPostalImage() alt="Postal Worker" >
-        </span>
-
-        <span @mouseover="hotdogHover = true" @mouseleave="hotdogHover = false">
-            <img :src=getHotdogImage() alt="Garnished Hotdog" >
-        </span>
-
-        <span @mouseover="lionHover = true" @mouseleave="lionHover = false">
-            <img :src=getLionImage() alt="Ferocious Lion" >
-        </span>
+        <img v-bind:src="currentBaristaImage" v-on:mouseover="currentBaristaImage = baristaSunny" v-on:mouseout="currentBaristaImage = barista" />
+        <img v-bind:src="currentPostalImage" v-on:mouseover="currentPostalImage = postalSunny" v-on:mouseout="currentPostalImage = postal" />
+        <img v-bind:src="currentLionImage" v-on:mouseover="currentLionImage = lionSunny" v-on:mouseout="currentLionImage = lion" />
+        <img v-bind:src="currentHotdogImage" v-on:mouseover="currentHotdogImage = hotdogSunny" v-on:mouseout="currentHotdogImage = hotdog" />
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
