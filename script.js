@@ -4,18 +4,13 @@ createApp({
     data() {
         return {
           titleMessage: "Sunny's Careers & Where They Began",
-          currentBaristaImage: "./images/barista.jpg",
-          baristaSunny: "./images/barista_sunny.jpg",
-          barista: "./images/barista.jpg",
-          currentPostalImage:"./images/postal.jpg",
-          postalSunny: "./images/postal_sunny.jpg",
-          postal: "./images/postal.jpg",
-          currentLionImage: "./images/lion.jpg",
-          lionSunny: "./images/lion_sunny.jpg",
-          lion: "./images/lion.jpg",
-          currentHotdogImage:"./images/hotdog.jpg",
-          hotdogSunny: "./images/hotdog_sunny.jpg",
-          hotdog: "./images/hotdog.jpg"
+          images : [
+            {current: './images/barista.jpg', original: './images/barista.jpg', sunny: './images/barista_sunny.jpg'},
+            {current: './images/postal.jpg', original: './images/postal.jpg', sunny: './images/postal_sunny.jpg'},
+            {current: './images/lion.jpg', original: './images/lion.jpg', sunny: './images/lion_sunny.jpg'},
+            {current: './images/hotdog.jpg', original: './images/hotdog.jpg', sunny: './images/hotdog_sunny.jpg'}
+          ],
+          imageIndex: 0
         }
     }
 }).mount('#app')

@@ -15,11 +15,12 @@
         <h1>Brooke Claroni HW 6</h1>
         <h2 class="title">{{ titleMessage }}</h2>
 
-        <img v-bind:src="currentBaristaImage" v-on:mouseover="currentBaristaImage = baristaSunny" v-on:mouseout="currentBaristaImage = barista" />
-        <img v-bind:src="currentPostalImage" v-on:mouseover="currentPostalImage = postalSunny" v-on:mouseout="currentPostalImage = postal" />
-        <img v-bind:src="currentLionImage" v-on:mouseover="currentLionImage = lionSunny" v-on:mouseout="currentLionImage = lion" />
-        <img v-bind:src="currentHotdogImage" v-on:mouseover="currentHotdogImage = hotdogSunny" v-on:mouseout="currentHotdogImage = hotdog" />
-
+        <div class="photos">
+            <button @click="imageIndex = (imageIndex + images.length - 1)%images.length">←</button>
+            <img :src="images[imageIndex].current" @mouseover="images[imageIndex].current=images[imageIndex].sunny" @mouseout="images[imageIndex].current=images[imageIndex].original">
+            <button @click="imageIndex = (imageIndex + 1)%images.length">→</button>
+        </div>
+ 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="script.js"></script>

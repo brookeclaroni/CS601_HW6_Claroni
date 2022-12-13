@@ -9,13 +9,25 @@ h1 {
     color: lightpink;
 }
 
-
 img {
-    height: 400px;
+    height: 600px;
     border-radius: 24px;
     padding: 12px;
 }
 
 .title { 
     text-align: center;
-  }
+}
+
+button {
+    background-color: lightpink;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: large;
+    font-family: Verdana;
+}
+
+.photos {
+    display: inline-flex;
+    align-items: center;
+}
