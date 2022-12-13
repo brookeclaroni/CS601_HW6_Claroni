@@ -27,6 +27,10 @@ button {
     font-family: Verdana;
 }
 
+button:hover {
+    background-color: hotpink;
+}
+
 .photos {
     display: inline-flex;
     align-items: center;
